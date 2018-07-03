@@ -1,8 +1,3 @@
-// Select color input
-// Select size input
-
-// When size is submitted by the user, call makeGrid()
-
 // Declaring the long-term variables
 const form = $('#sizePicker');
 const table = $('#pixelCanvas');
@@ -28,10 +23,10 @@ function clearCanvas() {
 // Draws a canvas with selected dimensions (width x height) on the page
 function drawCanvas() {
   let currentRow;
-  for (let width = 0; width < getWidthOfCanvas(); width++) {
+  for (let heigth = 0; heigth < getHeightOfCanvas(); heigth++) {
     table.append('<tr></tr>');
     currentRow = table.children('tr').last();
-    for (let heigth = 0; heigth < getHeightOfCanvas(); heigth++) {
+    for (let width = 0; width < getWidthOfCanvas(); width++) {
       currentRow.append('<td></td>');
     }
   }
